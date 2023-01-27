@@ -1,32 +1,30 @@
 import React from 'react';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Drawer1.module.css';
+
 import { styled, useTheme, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import MuiDrawer from '@mui/material/Drawer';
 import Drawer from '@mui/material/Drawer';
-import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
-import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import AppBar from '@mui/material/AppBar';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import InputBase from '@mui/material/InputBase';
 import MailIcon from '@mui/icons-material/Mail';
 import Badge from '@mui/material/Badge';
 import Avatar from '@mui/material/Avatar';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import Footer from './Footer'
 import SentimentSatisfiedAltRoundedIcon from '@mui/icons-material/SentimentSatisfiedAltRounded';
 import ListDetails from './ListDetails';
 import SearchIcon from '@mui/icons-material/Search';
-import PropTypes from 'prop-types';
+import Paper from '@mui/material/Paper';
+import Footer from './Footer'
+import Breadcrumb1 from './Breadcrumb1';
+import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
+
 
 
 const drawerWidth = 240;
@@ -46,11 +44,11 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 const drawer = (<div>
     <DrawerHeader sx={{
-        justifyContent: 'center',
+        justifyContent: 'end'
     }}>
         <Toolbar />
         <IconButton >
-            <SentimentSatisfiedAltRoundedIcon />Sooka UI Dashboard
+            <SentimentSatisfiedAltRoundedIcon />UI Dashboard
         </IconButton>
     </DrawerHeader>
 
@@ -111,96 +109,115 @@ export default function Drawer1({ children }) {
 
 
     return (
-        <div className={styles.container}>
+        <Container >
             <Head>
                 <title>Sooka Dashboard</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main>
-                <Box sx={{ display: 'flex' }}>
-                    <CssBaseline />
 
-                    <AppBar position="fixed"
-                        sx={{
-                            width: { sm: `calc(100% - ${drawerWidth}px)` }, ml: { sm: `${drawerWidth}px` },
-                            bgcolor: "rgb(248, 249, 250)",
-                            color: "rgba(0, 0, 0, 0.87)",
+            <Box sx={{ display: 'flex' }}>
+                <CssBaseline />
 
-                        }}>
-                        <Toolbar>
+                <AppBar position="fixed" className={styles.card} variant="permanent"
 
+                    sx={{
+                        width: { sm: `calc(97% - ${drawerWidth}px)` }, ml: { sm: `${drawerWidth}px` },
+                        bgcolor: "rgb(248, 249, 250)",
+                        color: "rgba(0, 0, 0, 0.87)"
 
+                    }}>
+                    <Toolbar>
+                        <Grid container spacing={3} direction="row"
+                            justifyContent="space-between"
+                            alignItems="center">
+                            <Grid item xs={12} md={8} >
+                                <Breadcrumb1 />
+                                <p>Table</p>
+                            </Grid>
+                            <Grid item xs={12} md={4} >
+                                <Box sx={{ flexGrow: 1 }} />
+                                <Box sx={{ display: { xs: 'flex', md: 'flex' }, justifyContent: "end" }} >
+                                    <Search sx={{ height: "100%", mt: "10px" }} >
+                                        <SearchIconWrapper >
+                                            <SearchIcon />
+                                        </SearchIconWrapper>
+                                        <StyledInputBase
+                                            placeholder="Search…"
+                                            inputProps={{ 'aria-label': 'search' }}
+                                        />
+                                    </Search>
+                                    <IconButton
+                                        color="inherit"
+                                        aria-label="open drawer"
+                                        edge="start"
+                                        onClick={handleDrawerToggle}
+                                        sx={{ mr: 2, display: { sm: 'none' } }}
+                                    >
+                                        <MenuOpenIcon />
+                                    </IconButton>
+                                    <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                                        <Badge badgeContent={4} color="error">
+                                            <MailIcon />
+                                        </Badge>
+                                    </IconButton>
+                                    <IconButton
+                                        size="large"
+                                        aria-label="show 17 new notifications"
+                                        color="inherit"
+                                    >
+                                        <Badge badgeContent={17} color="error">
+                                            <NotificationsIcon />
+                                        </Badge>
+                                    </IconButton>
 
-                            <Box sx={{ flexGrow: 1 }} />
-                            <Box sx={{ display: { xs: 'flex', md: 'flex' } }}>
-                                <Search sx={{ height: "100%", mt: "10px" }} >
-                                    <SearchIconWrapper >
-                                        <SearchIcon />
-                                    </SearchIconWrapper>
-                                    <StyledInputBase
-                                        placeholder="Search…"
-                                        inputProps={{ 'aria-label': 'search' }}
-                                    />
-                                </Search>
-                                <IconButton
-                                    color="inherit"
-                                    aria-label="open drawer"
-                                    edge="start"
-                                    onClick={handleDrawerToggle}
-                                    sx={{ mr: 2, display: { sm: 'none' } }}
-                                >
-                                    <MenuOpenIcon />
-                                </IconButton>
-                                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                                    <Badge badgeContent={4} color="error">
-                                        <MailIcon />
-                                    </Badge>
-                                </IconButton>
-                                <IconButton
-                                    size="large"
-                                    aria-label="show 17 new notifications"
-                                    color="inherit"
-                                >
-                                    <Badge badgeContent={17} color="error">
-                                        <NotificationsIcon />
-                                    </Badge>
-                                </IconButton>
-
-                                {/* <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+                                    {/* <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
                                     {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
                                 </IconButton> */}
-                                <IconButton >
-                                    <Avatar alt="Nada" src="/static/images/avatar/1.jpg" />
-                                </IconButton>
-                            </Box>
-                        </Toolbar>
-                    </AppBar>
-                    <Drawer
-                        // container={container}
-                        variant="temporary"
-                        open={mobileOpen}
-                        onClose={handleDrawerToggle}
-                        ModalProps={{
-                            keepMounted: true, // Better open performance on mobile.
-                        }}
-                        sx={{
-                            display: { xs: 'block', sm: 'none' },
-                            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                        }}
-                    >
-                        {drawer}
-                    </Drawer>
-                    <Drawer
-                        variant="permanent"
-                        sx={{
-                            display: { xs: 'none', sm: 'block' },
-                            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                        }}
-                        open  >{drawer}</Drawer>
+                                    <IconButton >
+                                        <Avatar alt="Nada" src="/static/images/avatar/1.jpg" />
+                                    </IconButton>
+                                </Box>
+                            </Grid>
+
+                        </Grid>
 
 
-                    {/* <DrawerHeader sx={{
+
+                    </Toolbar>
+                </AppBar>
+
+                <Drawer
+
+
+                    // container={container}
+                    variant="temporary"
+                    open={mobileOpen}
+                    onClose={handleDrawerToggle}
+                    ModalProps={{
+                        keepMounted: true, // Better open performance on mobile.
+                    }}
+                    sx={{
+                        display: { xs: 'block', sm: 'none' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, m: "10px", borderRadius: "10px", height: "98vh" },
+                    }}
+                >
+                    {drawer}
+                </Drawer>
+
+                <Drawer
+                    variant="permanent"
+                    sx={{
+                        display: { xs: 'none', sm: 'block' },
+                        '& .MuiDrawer-paper': {
+                            boxSizing: 'border-box', width: drawerWidth, m: "10px", borderRadius: "10px", height: "98vh",
+                            p: "10px", borderRight: "none",
+                        },
+                    }}
+                    open  >{drawer}</Drawer>
+
+
+                {/* <DrawerHeader sx={{
                             justifyContent: 'center',
                         }}>
                             {!open ? (<IconButton onClick={handleDrawerOpen}>
@@ -212,14 +229,14 @@ export default function Drawer1({ children }) {
 
                         </DrawerHeader> */}
 
-                    <main>{children}</main>
+                <main>{children}</main>
 
-                </Box>
-            </main>
+            </Box>
+
             <Footer />
 
 
-        </div >
+        </Container>
     )
 };
 

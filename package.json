@@ -13,6 +13,7 @@
     "@mui/material": "^5.11.6",
     "@mui/styled-engine-sc": "^5.11.0",
     "next": "latest",
+    "nextjs-breadcrumbs": "^1.1.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "^5.3.6"
