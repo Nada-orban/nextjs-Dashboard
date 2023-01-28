@@ -109,7 +109,7 @@ export default function Drawer1({ children }) {
 
 
     return (
-        <Container >
+        <Container maxWidth="xlg">
             <Head>
                 <title>Sooka Dashboard</title>
                 <link rel="icon" href="/favicon.ico" />
@@ -122,13 +122,13 @@ export default function Drawer1({ children }) {
                 <AppBar position="fixed" className={styles.card} variant="permanent"
 
                     sx={{
-                        width: { sm: `calc(97% - ${drawerWidth}px)` }, ml: { sm: `${drawerWidth}px` },
+                        width: { sm: `calc(98% - ${drawerWidth}px)` }, ml: { sm: `${drawerWidth}px` },
                         bgcolor: "rgb(248, 249, 250)",
                         color: "rgba(0, 0, 0, 0.87)"
 
                     }}>
                     <Toolbar>
-                        <Grid container spacing={3} direction="row"
+                        <Grid container maxWidth="xlg" spacing={3} direction="row"
                             justifyContent="space-between"
                             alignItems="center">
                             <Grid item xs={12} md={8} >
@@ -138,7 +138,7 @@ export default function Drawer1({ children }) {
                             <Grid item xs={12} md={4} >
                                 <Box sx={{ flexGrow: 1 }} />
                                 <Box sx={{ display: { xs: 'flex', md: 'flex' }, justifyContent: "end" }} >
-                                    <Search sx={{ height: "100%", mt: "10px" }} >
+                                    <Search sx={{ height: "100%", mt: "10px" }} variant="outlined" >
                                         <SearchIconWrapper >
                                             <SearchIcon />
                                         </SearchIconWrapper>
@@ -186,35 +186,40 @@ export default function Drawer1({ children }) {
 
                     </Toolbar>
                 </AppBar>
-
-                <Drawer
-
-
-                    // container={container}
-                    variant="temporary"
-                    open={mobileOpen}
-                    onClose={handleDrawerToggle}
-                    ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
-                    }}
-                    sx={{
-                        display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, m: "10px", borderRadius: "10px", height: "98vh" },
-                    }}
+                <Box
+                    component="nav"
+                    sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+                    aria-label="mailbox folders"
                 >
-                    {drawer}
-                </Drawer>
 
-                <Drawer
-                    variant="permanent"
-                    sx={{
-                        display: { xs: 'none', sm: 'block' },
-                        '& .MuiDrawer-paper': {
-                            boxSizing: 'border-box', width: drawerWidth, m: "10px", borderRadius: "10px", height: "98vh",
-                            p: "10px", borderRight: "none",
-                        },
-                    }}
-                    open  >{drawer}</Drawer>
+                    <Drawer
+                        // container={container}
+                        variant="temporary"
+                        open={mobileOpen}
+                        onClose={handleDrawerToggle}
+                        ModalProps={{
+                            keepMounted: true, // Better open performance on mobile.
+                        }}
+                        sx={{
+                            display: { xs: 'block', sm: 'none' },
+                            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, m: "10px", borderRadius: "10px", height: "98vh" },
+                        }}
+                    >
+                        {drawer}
+                    </Drawer>
+
+                    <Drawer
+                        variant="permanent"
+                        sx={{
+                            display: { xs: 'none', sm: 'block' },
+                            '& .MuiDrawer-paper': {
+                                boxSizing: 'border-box', width: drawerWidth, m: "10px", borderRadius: "10px", height: "98vh",
+                                p: "10px", borderRight: "none",
+                            },
+                        }}
+                        open  >{drawer}
+                    </Drawer>
+                </Box>
 
 
                 {/* <DrawerHeader sx={{
@@ -228,12 +233,19 @@ export default function Drawer1({ children }) {
                                 </IconButton>)}
 
                         </DrawerHeader> */}
+                <Box
+                    component="main"
+                    sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+                >
+                    <Toolbar />
+                    <main>{children}</main>
+                    <Footer />
+                </Box>
 
-                <main>{children}</main>
+
 
             </Box>
 
-            <Footer />
 
 
         </Container>
