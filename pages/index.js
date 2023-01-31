@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css'
 import Grid from '@mui/material/Grid';
-import Shortcutdetails from '../Components/Shortcutdetails';
-import Trakingdetails from '../Components/Trakingdetails';
+import Shortcutdetails from '../Components/Homecomponents/Shortcutdetails';
+import Trakingdetails from '../Components/Homecomponents/Trakingdetails';
 import Container from '@mui/material/Container';
+import Overview from '../Components/Homecomponents/Overview'
+import Projecttable from '../Components/Homecomponents/Projecttable';
 
 
 export default function Home() {
@@ -16,6 +18,8 @@ export default function Home() {
       <div>
         <Shortcutdetails />
         <Trakingdetails />
+        <Overview />
+        <Projecttable />
       </div>
 
 

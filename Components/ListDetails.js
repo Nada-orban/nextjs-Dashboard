@@ -38,7 +38,7 @@ function ListDetails() {
                 <Link href="/">
                     <ListItemButton>
                         <ListItemIcon >
-                            <Avatar sx={{ bgcolor: "blue" }} variant="rounded">
+                            <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
                                 <DashboardIcon />
                             </Avatar>
 
@@ -49,7 +49,7 @@ function ListDetails() {
                 <Link href="/table">
                     <ListItemButton>
                         <ListItemIcon>
-                            <Avatar sx={{ bgcolor: "blue" }} variant="rounded">
+                            <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
                                 < AssessmentIcon />
                             </Avatar>
                         </ListItemIcon>
@@ -61,7 +61,7 @@ function ListDetails() {
                 <Link href="/billing">
                     <ListItemButton>
                         <ListItemIcon>
-                            <Avatar sx={{ bgcolor: "blue" }} variant="rounded">
+                            <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
                                 <CreditCardIcon />
                             </Avatar>
                         </ListItemIcon>
@@ -71,7 +71,7 @@ function ListDetails() {
                 <Link href="/rtl">
                     <ListItemButton>
                         <ListItemIcon>
-                            <Avatar sx={{ bgcolor: "blue" }} variant="rounded">
+                            <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
                                 <BuildIcon />
                             </Avatar>
                         </ListItemIcon>
@@ -93,7 +93,7 @@ function ListDetails() {
                 <Link href="/profile">
                     <ListItemButton>
                         <ListItemIcon>
-                            <Avatar sx={{ bgcolor: "blue" }} variant="rounded">
+                            <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
                                 <Person2Icon />
                             </Avatar>
                         </ListItemIcon>
@@ -103,7 +103,7 @@ function ListDetails() {
                 <Link href="/signin">
                     <ListItemButton>
                         <ListItemIcon>
-                            <Avatar sx={{ bgcolor: "blue" }} variant="rounded">
+                            <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
                                 <LoginIcon />
                             </Avatar>
                         </ListItemIcon>
@@ -113,7 +113,7 @@ function ListDetails() {
                 <Link href="/signup">
                     <ListItemButton>
                         <ListItemIcon>
-                            <Avatar sx={{ bgcolor: "blue" }} variant="rounded">
+                            <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
                                 <LogoutIcon />
                             </Avatar>
                         </ListItemIcon>

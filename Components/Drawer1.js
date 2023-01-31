@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import styles from '../styles/Drawer1.module.css';
-
 import { styled, useTheme, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -24,6 +23,16 @@ import Footer from './Footer'
 import Breadcrumb1 from './Breadcrumb1';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
+import SpeedDial from '@mui/material/SpeedDial';
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
+import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
+import SaveIcon from '@mui/icons-material/Save';
+import PrintIcon from '@mui/icons-material/Print';
+import ShareIcon from '@mui/icons-material/Share';
+import { blue } from '@mui/material/colors';
+
+
 
 
 
@@ -97,6 +106,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
+const actions = [
+    { icon: <FileCopyIcon />, name: 'Copy' },
+    { icon: <SaveIcon />, name: 'Save' },
+    { icon: <PrintIcon />, name: 'Print' },
+    { icon: <ShareIcon />, name: 'Share' },
+];
 export default function Drawer1({ children }) {
     // const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -120,6 +135,7 @@ export default function Drawer1({ children }) {
                 <CssBaseline />
 
                 <AppBar position="fixed" className={styles.card} variant="permanent"
+
 
                     sx={{
                         width: { sm: `calc(98% - ${drawerWidth}px)` }, ml: { sm: `${drawerWidth}px` },
@@ -244,7 +260,25 @@ export default function Drawer1({ children }) {
 
 
 
+
+
             </Box>
+            <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1, position: "fixed", bottom: 16, right: 16 }}>
+                <SpeedDial
+                    ariaLabel="SpeedDial basic example"
+                    sx={{ position: 'absolute', bottom: 16, right: 16 }}
+                    icon={<SpeedDialIcon />}
+                >
+                    {actions.map((action) => (
+                        <SpeedDialAction
+                            key={action.name}
+                            icon={action.icon}
+                            tooltipTitle={action.name}
+                        />
+                    ))}
+                </SpeedDial>
+            </Box>
+
 
 
 
