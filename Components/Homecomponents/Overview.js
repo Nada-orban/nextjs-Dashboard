@@ -16,7 +16,7 @@ import { blue } from '@mui/material/colors';
 
 function Trakingdetails() {
     return (
-        <Grid container sx={{ width: "100%", mt: 1 }}>
+        <Grid container sx={{ width: "100%", mt: 3 }}>
             <Grid item xs={12} md={7}>
                 <Card className={styles.card}>
                     <CardContent className={styles.buttondetails}>

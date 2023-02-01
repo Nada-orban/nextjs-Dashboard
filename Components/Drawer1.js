@@ -31,6 +31,13 @@ import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
 import { blue } from '@mui/material/colors';
+import NightlightRoundIcon from '@mui/icons-material/NightlightRound';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import { ColorModeContext } from '../public/theme'
+import { useState } from 'react';
+
+
+// const ColorModeContext = React.createContext({ toggleColorMode: () => { } });
 
 
 
@@ -114,6 +121,8 @@ const actions = [
 ];
 export default function Drawer1({ children }) {
     // const { window } = props;
+    const theme = useTheme();
+    const colorMode = React.useContext(ColorModeContext);
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -129,9 +138,8 @@ export default function Drawer1({ children }) {
                 <title>Sooka Dashboard</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
-
-            <Box sx={{ display: 'flex' }}>
+            {/* only in box i can write css directly */}
+            <Box display='flex' >
                 <CssBaseline />
 
                 <AppBar position="fixed" className={styles.card} variant="permanent"
@@ -139,7 +147,7 @@ export default function Drawer1({ children }) {
 
                     sx={{
                         width: { sm: `calc(98% - ${drawerWidth}px)` }, ml: { sm: `${drawerWidth}px` },
-                        bgcolor: "rgb(248, 249, 250)",
+                        bgcolor: 'secondary.main',
                         color: "rgba(0, 0, 0, 0.87)"
 
                     }}>
@@ -186,6 +194,13 @@ export default function Drawer1({ children }) {
                                             <NotificationsIcon />
                                         </Badge>
                                     </IconButton>
+
+                                    <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+                                        {theme.palette.mode === 'dark' ? <LightModeIcon /> : <NightlightRoundIcon />}
+                                    </IconButton>
+                                    {/* <IconButton>
+                                        {dark ? }
+                                    </IconButton> */}
 
                                     {/* <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
                                     {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
@@ -254,7 +269,7 @@ export default function Drawer1({ children }) {
                     sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
                 >
                     <Toolbar />
-                    <main>{children}</main>
+                    <main >{children}</main>
                     <Footer />
                 </Box>
 
@@ -282,7 +297,7 @@ export default function Drawer1({ children }) {
 
 
 
-        </Container>
+        </Container >
     )
 };
 
