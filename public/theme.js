@@ -24,6 +24,8 @@ export const themeSettongs = (mode) => {
                     main: deepPurple[900],
                 },
                 neutral: {
+                    greenlight: green[300],
+                    greendark: green[700],
                     green: green[400],
                     red: red[500],
                     blue: blue[900],
@@ -44,6 +46,8 @@ export const themeSettongs = (mode) => {
                     main: grey[100],
                 },
                 neutral: {
+                    greenlight: green[300],
+                    greendark: green[700],
                     green: green[400],
                     red: red[500],
                     blue: blue[900],
