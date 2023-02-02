@@ -16,17 +16,18 @@ import Paper from '@mui/material/Paper';
 import { blue } from '@mui/material/colors';
 import Image from 'next/image'
 
-const myLoader = ({ src, width, quality }) => {
-    return "https://www.freepik.com/free-vector/flying-rocket-background_1130797.htm#query=rocket&position=4&from_view=search&track=sph"
-}
+import { styled, useTheme, alpha } from '@mui/material/styles';
+
 
 
 
 function Trakingdetails() {
+    const theme = useTheme();
+
     return (
         <Grid container sx={{ width: "100%", mt: 3 }}>
             <Grid item xs={12} md={5}>
-                <Card className={styles.card} >
+                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary" }}>
                     <CardContent className={styles.buttondetails}>
                         <div sx={{ display: "flex" }}>
                             <h6>welcome back,</h6>
@@ -36,8 +37,8 @@ function Trakingdetails() {
                             <p>Tap to record</p>
 
                         </div>
-                        <Image
-                            loader={myLoader}
+                        <img
+
                             src="me.png"
                             alt="Picture of the author"
                             width={500}
@@ -48,7 +49,7 @@ function Trakingdetails() {
                 </Card>
             </Grid>
             <Grid item xs={12} md={3}>
-                <Card xs={{ position: "relative" }} className={styles.card}>
+                <Card xs={{ position: "relative" }} className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary" }}>
                     <CardContent >
                         <h3>Statisfaction</h3>
                         <p>From all projects</p>
@@ -69,7 +70,7 @@ function Trakingdetails() {
             </Grid>
 
             <Grid item xs={12} md={4}  >
-                <Card className={styles.card}>
+                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary" }}>
                     <CardContent sx={{ display: "flex", justifyContent: "space-between" }}>
                         <Box>
                             <h3>Referral Tracking</h3>

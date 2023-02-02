@@ -46,7 +46,7 @@ function ListDetails() {
                         <ListItemText primary="Dashboard" />
                     </ListItemButton>
                 </Link>
-                <Link href="/table">
+                <Link href="/tables">
                     <ListItemButton>
                         <ListItemIcon>
                             <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">

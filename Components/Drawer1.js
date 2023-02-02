@@ -143,12 +143,10 @@ export default function Drawer1({ children }) {
                 <CssBaseline />
 
                 <AppBar position="fixed" className={styles.card} variant="permanent"
-
-
                     sx={{
                         width: { sm: `calc(98% - ${drawerWidth}px)` }, ml: { sm: `${drawerWidth}px` },
-                        bgcolor: 'secondary.main',
-                        color: "rgba(0, 0, 0, 0.87)"
+                        bgcolor: 'secondary.main', color: "text.primary",
+
 
                     }}>
                     <Toolbar>
@@ -252,18 +250,6 @@ export default function Drawer1({ children }) {
                     </Drawer>
                 </Box>
 
-
-                {/* <DrawerHeader sx={{
-                            justifyContent: 'center',
-                        }}>
-                            {!open ? (<IconButton onClick={handleDrawerOpen}>
-                                <ChevronRightIcon />
-                            </IconButton>) :
-                                (<IconButton onClick={handleDrawerClose}>
-                                    <ChevronLeftIcon />
-                                </IconButton>)}
-
-                        </DrawerHeader> */}
                 <Box
                     component="main"
                     sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
@@ -301,11 +287,4 @@ export default function Drawer1({ children }) {
     )
 };
 
-// Drawer1.propTypes = {
-//     /**
-//      * Injected by the documentation to work in an iframe.
-//      * You won't need it on your project.
-//      */
-//     window: PropTypes.func,
-// };
 

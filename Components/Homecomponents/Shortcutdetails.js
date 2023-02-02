@@ -14,6 +14,7 @@ import { blue } from '@mui/material/colors';
 import PublicIcon from '@mui/icons-material/Public';
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+import { height } from '@mui/system';
 
 
 
@@ -22,7 +23,7 @@ function Shortcutdetails() {
     return (
         <Grid container sx={{ width: "100%", mt: 3 }}>
             <Grid item xs={12} md={3}>
-                <Card className={styles.card}>
+                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary" }}>
                     <CardContent className={styles.buttondetails}>
                         <div>
                             <p>Today's Money</p>
@@ -36,7 +37,7 @@ function Shortcutdetails() {
                 </Card>
             </Grid>
             <Grid item xs={12} md={3}>
-                <Card className={styles.card} >
+                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary" }}>
                     <CardContent className={styles.buttondetails}>
                         <div>
                             <p>Today's Money</p>
@@ -50,7 +51,7 @@ function Shortcutdetails() {
                 </Card>
             </Grid>
             <Grid item xs={12} md={3}>
-                <Card className={styles.card}>
+                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary" }}>
                     <CardContent className={styles.buttondetails}>
                         <div>
                             <p>Today's Money</p>
@@ -64,7 +65,7 @@ function Shortcutdetails() {
                 </Card>
             </Grid>
             <Grid item xs={12} md={3}>
-                <Card className={styles.card}>
+                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary" }}>
                     <CardContent className={styles.buttondetails}>
                         <div>
                             <p>Today's Money</p>

@@ -18,7 +18,7 @@ function Trakingdetails() {
     return (
         <Grid container sx={{ width: "100%", mt: 3 }}>
             <Grid item xs={12} md={7}>
-                <Card className={styles.card}>
+                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary" }}>
                     <CardContent className={styles.buttondetails}>
                         <div>
                             <p>Today's Money</p>
@@ -32,7 +32,7 @@ function Trakingdetails() {
                 </Card>
             </Grid>
             <Grid item xs={12} md={5}>
-                <Card className={styles.card}>
+                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary" }}>
                     <CardContent className={styles.buttondetails}>
                         <div>
                             <p>Today's Money</p>

@@ -18,10 +18,10 @@ export const themeSettongs = (mode) => {
             mode: mode,
             ...(mode === "dark" ? {
                 primary: {
-                    main: blue[700],
+                    main: deepPurple[400],
                 },
                 secondary: {
-                    main: indigo[700],
+                    main: deepPurple[900],
                 },
                 neutral: {
                     green: green[400],
@@ -29,15 +29,16 @@ export const themeSettongs = (mode) => {
                     blue: blue[900],
                 },
                 background: {
-                    main: grey[100],
-                }, text: {
+                    main: deepPurple[900],
+                },
+                text: {
                     primary: '#fff',
                     secondary: grey[500],
                 },
 
             } : {
                 primary: {
-                    main: blue[700],
+                    main: '#fff',
                 },
                 secondary: {
                     main: grey[100],
