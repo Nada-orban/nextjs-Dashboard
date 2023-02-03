@@ -90,7 +90,7 @@ function ListDetails() {
                         ACCOUNTPAGES
                     </ListSubheader>
                 }>
-                <Link href="/profile">
+                <Link href="/profiles/profile">
                     <ListItemButton>
                         <ListItemIcon>
                             <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
@@ -98,6 +98,16 @@ function ListDetails() {
                             </Avatar>
                         </ListItemIcon>
                         <ListItemText primary="Profile" />
+                    </ListItemButton>
+                </Link>
+                <Link href="/profiles/form">
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
+                                <Person2Icon />
+                            </Avatar>
+                        </ListItemIcon>
+                        <ListItemText primary="Form" />
                     </ListItemButton>
                 </Link>
                 <Link href="/signin">
