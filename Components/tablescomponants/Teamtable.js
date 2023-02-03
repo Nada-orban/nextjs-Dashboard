@@ -26,7 +26,7 @@ function teamtable() {
                         {access === "admin" && <AdminPanelSettingsIcon />}
                         {access === "manager" && <SecurityIcon />}
                         {access === "user" && <LockIcon />}
-                        <Typography sx={{ ml: 2 }} color="GrayText.secondary">
+                        <Typography color="GrayText.secondary">
                             {access}
                         </Typography>
                     </Box>
@@ -38,7 +38,17 @@ function teamtable() {
         <Box >
             <Header title="Team" subtitle={"Managing the team members"} />
 
-            <Box width="100%" height={500} backgroundColor="primary.main" color="text.primary">
+            <Box width="100%" height={500} backgroundColor="primary.main" color="text.primary" sx={{
+                "& .MuiDataGrid-root": {
+                    borderStyle: "none",
+                    borderRadius: "10px",
+                    padding: "10px",
+
+                }, "& .MuiDataGrid-footerContainer": {
+                    display: "none",
+
+                },
+            }}>
                 <DataGrid rows={mockDataTeam} columns={columns} />
             </Box>
 

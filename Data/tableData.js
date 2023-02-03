@@ -61,15 +61,15 @@ export const Authorstable = [
 
     },
 ];
-export const Projecttable = [
+export const Projecttabledata = [
     {
 
         id: 1,
         Image: "",
-        project: "Spotift",
+        project: ["", "Spotift"],
         budget: "$2,500",
         status: "working",
-        completion: "60%",
+        completion: 60,
         action: "",
 
 
@@ -80,7 +80,7 @@ export const Projecttable = [
         project: "Invesion",
         budget: "$5,500",
         status: "done",
-        completion: "100%",
+        completion: 100,
         action: "",
 
 
@@ -91,7 +91,7 @@ export const Projecttable = [
         project: "Jira",
         budget: "$7,000",
         status: "canceled",
-        completion: "30%",
+        completion: 30,
         action: "",
 
     }, {
@@ -101,7 +101,7 @@ export const Projecttable = [
         project: "Slack",
         budget: "$2,400",
         status: "canceled",
-        completion: "0%",
+        completion: 0,
         action: "",
 
     }, {
@@ -111,7 +111,7 @@ export const Projecttable = [
         project: "Webdev",
         budget: "$15,500",
         status: "working",
-        completion: "80%",
+        completion: 80,
         action: "",
 
 
@@ -122,7 +122,7 @@ export const Projecttable = [
         project: "Adobe XD",
         budget: "$2,200",
         status: "done",
-        completion: "100%",
+        completion: 100,
         action: "",
 
     },
@@ -134,7 +134,7 @@ export const totaltable = [
         company: "Soft UI XD Version",
         members: ["jon", "alexa", "Jaime"],
         budget: "$10,000",
-        completion: "100%",
+        completion: 100,
     },
     {
 
@@ -143,7 +143,7 @@ export const totaltable = [
         company: "Add Progress Track",
         members: ["jon", "alexa", "Jaime"],
         budget: "$10,000",
-        completion: "100%",
+        completion: 60,
     }, {
 
         id: 3,
@@ -151,7 +151,7 @@ export const totaltable = [
         company: "Fix Platform Errors",
         members: ["jon", "alexa", "Jaime"],
         budget: "$10,000",
-        completion: "100%",
+        completion: 10,
     }, {
 
         id: 4,
@@ -159,7 +159,7 @@ export const totaltable = [
         company: "Launch our Mobile App",
         members: ["jon", "alexa", "Jaime"],
         budget: "$10,000",
-        completion: "100%",
+        completion: 0,
 
     }, {
 
@@ -168,7 +168,7 @@ export const totaltable = [
         company: "Add the New Pricing Page",
         members: ["jon", "alexa", "Jaime"],
         budget: "$10,000",
-        completion: "100%",
+        completion: 100,
     }, {
 
         id: 6,
@@ -176,7 +176,7 @@ export const totaltable = [
         company: "Redesign New Online Shop",
         members: ["jon", "alexa", "Jaime"],
         budget: "$10,000",
-        completion: "100%",
+        completion: 80,
     },
 
 ]

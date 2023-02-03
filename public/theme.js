@@ -21,7 +21,7 @@ export const themeSettongs = (mode) => {
                     main: deepPurple[400],
                 },
                 secondary: {
-                    main: deepPurple[900],
+                    main: "rgb(52, 71, 103)",
                 },
                 neutral: {
                     greenlight: green[300],
@@ -31,7 +31,7 @@ export const themeSettongs = (mode) => {
                     blue: blue[900],
                 },
                 background: {
-                    main: deepPurple[900],
+                    main: "rgb(52, 71, 103)",
                 },
                 text: {
                     primary: '#fff',

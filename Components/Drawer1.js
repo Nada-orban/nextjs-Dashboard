@@ -231,7 +231,10 @@ export default function Drawer1({ children }) {
                         }}
                         sx={{
                             display: { xs: 'block', sm: 'none' },
-                            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, m: "10px", borderRadius: "10px", height: "98vh" },
+                            '& .MuiDrawer-paper': {
+                                boxSizing: 'border-box', width: drawerWidth, m: "10px", borderRadius: "10px",
+                                height: "98vh",
+                            },
                         }}
                     >
                         {drawer}
