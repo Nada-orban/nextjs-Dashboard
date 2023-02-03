@@ -41,6 +41,12 @@ ul {
 button {
   padding: 0.5rem 1rem;
   font-weight: bold;
+  border-style: none;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  margin-top: 20px;
+
 }
 .card {
   margin: 1rem;

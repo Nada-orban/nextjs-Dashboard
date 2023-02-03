@@ -258,7 +258,7 @@ export default function Drawer1({ children }) {
                     sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
                 >
                     <Toolbar />
-                    <main >{children}</main>
+                    <main className={styles.main}>{children}</main>
                     <Footer />
                 </Box>
 

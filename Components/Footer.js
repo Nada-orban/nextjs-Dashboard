@@ -14,14 +14,14 @@ function Footer() {
     return (
 
         <Grid container spacing={5} sx={{ display: "flex", mt: 1, alignItems: "center", color: "gray" }} >
-            <Grid item xs={8} md={9}>
+            <Grid item xs={12} md={8}>
 
                 <Typography variant="h6" >
                     @ 2021, Made with < FavoriteIcon sx={{ color: "red" }} />  by Simmmple&Creative Timfor a better web
                 </Typography>
 
             </Grid>
-            <Grid item xs={8} md={3} sx={{ justifyContent: "end", }}>
+            <Grid item xs={12} md={4} sx={{ justifyContent: "end", }}>
                 <List sx={{ display: "flex", }}>
                     <ListItem >
                         <ListItemText primary="Creative Tim" />

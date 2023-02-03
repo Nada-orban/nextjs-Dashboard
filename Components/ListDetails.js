@@ -14,6 +14,7 @@ import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
 import Avatar from '@mui/material/Avatar';
 import Link from 'next/link'
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import Fab from '@mui/material/Fab';
 
 
@@ -108,6 +109,16 @@ function ListDetails() {
                             </Avatar>
                         </ListItemIcon>
                         <ListItemText primary="Form" />
+                    </ListItemButton>
+                </Link>
+                <Link href="/calendar">
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
+                                <CalendarTodayIcon />
+                            </Avatar>
+                        </ListItemIcon>
+                        <ListItemText primary="Calendar" />
                     </ListItemButton>
                 </Link>
                 <Link href="/signin">
