@@ -16,6 +16,9 @@ import Avatar from '@mui/material/Avatar';
 import Link from 'next/link'
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import Fab from '@mui/material/Fab';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import DonutLargeIcon from '@mui/icons-material/DonutLarge';
+import TimelineIcon from '@mui/icons-material/Timeline';
 
 
 
@@ -119,6 +122,36 @@ function ListDetails() {
                             </Avatar>
                         </ListItemIcon>
                         <ListItemText primary="Calendar" />
+                    </ListItemButton>
+                </Link>
+                <Link href="/piechart">
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
+                                <DonutLargeIcon />
+                            </Avatar>
+                        </ListItemIcon>
+                        <ListItemText primary="Pie Chart" />
+                    </ListItemButton>
+                </Link>
+                <Link href="/barchart">
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
+                                <BarChartIcon />
+                            </Avatar>
+                        </ListItemIcon>
+                        <ListItemText primary="Bar Chart" />
+                    </ListItemButton>
+                </Link>
+                <Link href="/linechart">
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
+                                <TimelineIcon />
+                            </Avatar>
+                        </ListItemIcon>
+                        <ListItemText primary="Bar Chart" />
                     </ListItemButton>
                 </Link>
                 <Link href="/signin">
