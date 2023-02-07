@@ -5,9 +5,9 @@ import Header from '../Components/Header'
 
 function piechart() {
     return (
-        <Box width="50%">
+        <Box width="100%">
             <Header title="Pie Chart" subtitle={"Pie Chart information"}></Header>
-            <Box height="50vh">
+            <Box height="70vh" justifyContent="center">
                 <Piechart />
             </Box>
         </Box>

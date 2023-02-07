@@ -151,7 +151,7 @@ function ListDetails() {
                                 <TimelineIcon />
                             </Avatar>
                         </ListItemIcon>
-                        <ListItemText primary="Bar Chart" />
+                        <ListItemText primary="Line Chart" />
                     </ListItemButton>
                 </Link>
                 <Link href="/signin">
