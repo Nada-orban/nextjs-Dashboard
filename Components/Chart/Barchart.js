@@ -3,7 +3,7 @@ import { mockBarData } from "../../Data/mockData"
 import { ResponsiveBar } from '@nivo/bar'
 
 
-function Barchart() {
+function Barchart({ isDashboard = false }) {
     return (
         <ResponsiveBar
             data={mockBarData}
@@ -70,7 +70,7 @@ function Barchart() {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'country',
+                legend: isDashboard ? undefined : 'country',
                 legendPosition: 'middle',
                 legendOffset: 32
             }}
@@ -78,7 +78,7 @@ function Barchart() {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'food',
+                legend: isDashboard ? undefined : 'food',
                 legendPosition: 'middle',
                 legendOffset: -40
             }}
