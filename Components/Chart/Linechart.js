@@ -4,7 +4,7 @@ import { ResponsiveLine } from '@nivo/line'
 
 
 
-function Linechart() {
+function Linechart({ isDashboard = false }) {
     return (
         <ResponsiveLine
             data={mockLineData}
@@ -25,7 +25,7 @@ function Linechart() {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'transportation',
+                legend: isDashboard ? undefined : 'transportation',
                 legendOffset: 36,
                 legendPosition: 'middle'
             }}
@@ -34,7 +34,7 @@ function Linechart() {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'count',
+                legend: isDashboard ? undefined : 'count',
                 legendOffset: -40,
                 legendPosition: 'middle'
             }}

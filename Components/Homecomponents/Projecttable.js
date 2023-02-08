@@ -30,55 +30,16 @@ import SendIcon from '@mui/icons-material/Send';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
+import Linechart from '../Chart/Linechart'
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import CreditCardIcon from '@mui/icons-material/CreditCard';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import SellIcon from '@mui/icons-material/Sell';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 
 
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
-const options = [
-    'Action',
-    'Another action',
-    'Something else',
-];
-
-
-function EnhancedTableToolbar() {
-    return (
-        <Toolbar
-            sx={{
-                pl: { sm: 2 },
-                pr: { xs: 1, sm: 1 },
-
-            }}
-        >
-            <Typography
-                sx={{ flex: '1 1 100%' }}
-                variant="h6"
-                id="tableTitle"
-                component="div"
-            >
-                <h3>Projects</h3>
-                <p><span>30</span>done this month</p>
-            </Typography>
-
-            <Tooltip title="Filter list">
-                <IconButton>
-                    <FilterListIcon />
-                </IconButton>
-            </Tooltip>
-
-        </Toolbar>
-    );
-}
 
 
 
@@ -93,83 +54,69 @@ function Projecttable
         setOpen(!open);
     };
     return (
-        <Grid container spacing={1} sx={{ width: "100%", mt: 3 }}>
+        <Grid container spacing={1} sx={{ width: "100%", mt: 3, height: "100%" }}>
             <Grid item xs={12} md={9}>
-                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary" }}>
-                    <EnhancedTableToolbar />
-                    <TableContainer  >
-                        <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>Dessert (100g serving)</TableCell>
-                                    <TableCell align="right">Calories</TableCell>
-                                    <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                                    <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                                    <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {rows.map((row) => (
-                                    <TableRow
-                                        key={row.name}
-                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                    >
-                                        <TableCell component="th" scope="row">
-                                            {row.name}
-                                        </TableCell>
-                                        <TableCell align="right">{row.calories}</TableCell>
-                                        <TableCell align="right">{row.fat}</TableCell>
-                                        <TableCell align="right">{row.carbs}</TableCell>
-                                        <TableCell align="right">{row.protein}</TableCell>
-                                    </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
+                <Card xs={{ position: "relative" }} className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary", height: "100%", height: "50vh" }}>
+                    <CardContent >
+                        <Typography variant='h5' component="h5">Sales Quantity</Typography>
+                        <Box height="40vh" width="100%">
+                            <Linechart />
+                        </Box>
+
+                    </CardContent>
                 </Card>
+
             </Grid>
-            <Grid item xs={12} md={3}>
-                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary" }}>
-                    <List
-                        sx={{ width: '100%', maxWidth: 360 }}
-                        component="nav"
-                        aria-labelledby="nested-list-subheader"
-                        subheader={
-                            <ListSubheader component="div" id="nested-list-subheader">
-                                Nested List Items
-                            </ListSubheader>
-                        }
-                    >
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <SendIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Sent mail" />
-                        </ListItemButton>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <DraftsIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Drafts" />
-                        </ListItemButton>
-                        <ListItemButton onClick={handleClick}>
-                            <ListItemIcon>
-                                <InboxIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Inbox" />
-                            {open ? <ExpandLess /> : <ExpandMore />}
-                        </ListItemButton>
-                        <Collapse in={open} timeout="auto" unmountOnExit>
-                            <List component="div" disablePadding>
-                                <ListItemButton sx={{ pl: 4 }}>
-                                    <ListItemIcon>
-                                        <StarBorder />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Starred" />
-                                </ListItemButton>
-                            </List>
-                        </Collapse>
-                    </List>
+            <Grid item xs={12} md={3} >
+                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary", height: "50vh" }}>
+
+                    <CardContent >
+                        <Typography variant='h5' component="h5" >Order Overview</Typography>
+                        <Typography sx={{ color: "gray", mt: 1 }} component="h6"><ArrowUpwardIcon sx={{ color: "green" }} /><span>24%</span>this month</Typography>
+                        <List
+                            sx={{ width: '100%', maxWidth: 360 }}
+                            component="nav"
+                            aria-labelledby="nested-list-subheader"
+                        // subheader={
+                        //     <ListSubheader component="h6" id="nested-list-subheader">
+                        //         Nested List Items
+                        //     </ListSubheader>
+                        // }
+                        >
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <NotificationsIcon sx={{ color: "green" }} />
+                                </ListItemIcon>
+                                <ListItemText primary="$2400,Design changes" secondary="Jan 9, 2014" />
+                            </ListItemButton>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <SellIcon sx={{ color: "red" }} />
+                                </ListItemIcon>
+                                <ListItemText primary="New order #1832412" secondary="Jan 9, 2014" />
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <ShoppingCartIcon sx={{ color: "blue" }} />
+                                </ListItemIcon>
+                                <ListItemText primary="Server Payments for April" secondary="Jan 9, 2014" />
+                            </ListItemButton>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <CreditCardIcon sx={{ color: "orange" }} />
+                                </ListItemIcon>
+                                <ListItemText primary="New card added for order #4395133" secondary="Jan 9, 2014" />
+                            </ListItemButton>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <AttachMoneyIcon sx={{ color: "green" }} />
+                                </ListItemIcon>
+                                <ListItemText primary="New order#4657890" secondary="Jan 9, 2014" />
+                            </ListItemButton>
+
+                        </List>
+                    </CardContent>
 
                 </Card>
             </Grid>

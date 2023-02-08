@@ -255,10 +255,10 @@ export default function Drawer1({ children }) {
 
                 <Box
                     component="main"
-                    sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+                    sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, backgroundColor: "Background.main" }}
                 >
                     <Toolbar />
-                    <main className={styles.main}>{children}</main>
+                    <main className={styles.main} >{children}</main>
                     <Footer />
                 </Box>
 
