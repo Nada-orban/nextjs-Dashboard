@@ -18,7 +18,7 @@ export const themeSettongs = (mode) => {
             mode: mode,
             ...(mode === "dark" ? {
                 primary: {
-                    main: deepPurple[400],
+                    main: deepPurple[800],
                 },
                 secondary: {
                     main: "rgb(52, 71, 103)",

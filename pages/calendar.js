@@ -47,7 +47,7 @@ function MyCalendar() {
         <Box>
             <Header title="Calendar" subtitle={"Full Calendar Interative Page"} ></Header>
             <Box display="flex" gap="30px">
-                <Box flex="1 1 20%" backgroundColor="white" height="50vh" borderRedius="10px" p="10px">
+                <Box flex="1 1 20%" backgroundColor='primary.main' color="text.primary" borderRadius="10px" height="50vh" borderRedius="10px" p="10px">
                     <h2>Events</h2>
                     <List>
                         {currentEvent.map(event => {

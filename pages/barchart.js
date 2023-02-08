@@ -7,7 +7,7 @@ function barchart() {
     return (
         <Box width="50%" >
             <Header title="Bar Chart" subtitle={"Bar Chart information"}></Header>
-            <Box height="50vh">
+            <Box height="50vh" backgroundColor='primary.main' color="text.primary" borderRadius="10px">
                 <Barchart />
             </Box>
         </Box>

@@ -60,7 +60,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 const drawer = (<div>
     <DrawerHeader sx={{
-        justifyContent: 'end'
+        justifyContent: 'end',
     }}>
         <Toolbar />
         <IconButton >
@@ -145,7 +145,7 @@ export default function Drawer1({ children }) {
                 <AppBar position="fixed" className={styles.card} variant="permanent"
                     sx={{
                         width: { sm: `calc(98% - ${drawerWidth}px)` }, ml: { sm: `${drawerWidth}px` },
-                        bgcolor: 'secondary.main', color: "text.primary",
+                        bgcolor: 'primary.main', color: "text.primary",
 
 
                     }}>
@@ -233,7 +233,7 @@ export default function Drawer1({ children }) {
                             display: { xs: 'block', sm: 'none' },
                             '& .MuiDrawer-paper': {
                                 boxSizing: 'border-box', width: drawerWidth, m: "10px", borderRadius: "10px",
-                                height: "98vh",
+                                height: "98vh", bgcolor: 'primary.main', color: "text.primary",
                             },
                         }}
                     >
@@ -246,7 +246,7 @@ export default function Drawer1({ children }) {
                             display: { xs: 'none', sm: 'block' },
                             '& .MuiDrawer-paper': {
                                 boxSizing: 'border-box', width: drawerWidth, m: "10px", borderRadius: "10px", height: "98vh",
-                                p: "10px", borderRight: "none",
+                                p: "10px", borderRight: "none", bgcolor: 'primary.main', color: "text.primary",
                             },
                         }}
                         open  >{drawer}

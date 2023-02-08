@@ -7,7 +7,7 @@ function piechart() {
     return (
         <Box width="100%">
             <Header title="Pie Chart" subtitle={"Pie Chart information"}></Header>
-            <Box height="70vh" justifyContent="center">
+            <Box height="70vh" justifyContent="center" backgroundColor='primary.main' color="text.primary" borderRadius="10px">
                 <Piechart />
             </Box>
         </Box>

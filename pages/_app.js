@@ -8,6 +8,7 @@ import { ColorModeContext, useMode } from '../public/theme'
 import { styled, useTheme, alpha } from '@mui/material/styles';
 
 
+
 export default function MyApp({ Component, pageProps }) {
 
     const [theme, colorMode] = useMode();
@@ -23,7 +24,7 @@ export default function MyApp({ Component, pageProps }) {
                 <Drawer1>
                     <Component {...pageProps} />
                     <style jsx global>{`
-                    ${theme.palette.mode === 'dark' ? "body{background:green} " : "body{background:blue} "}`
+                    ${theme.palette.mode === 'dark' ? "body{background:#311b92} " : "body{background: rgb(248, 249, 250)} "}`
                     }</style>
                 </Drawer1>
 
