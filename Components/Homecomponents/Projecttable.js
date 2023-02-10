@@ -55,8 +55,8 @@ function Projecttable
     };
     return (
         <Grid container spacing={1} sx={{ width: "100%", mt: 3, height: "100%" }}>
-            <Grid item xs={12} md={9}>
-                <Card xs={{ position: "relative" }} className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary", height: "100%", height: "50vh" }}>
+            <Grid item xs={12} md={8}>
+                <Card xs={{ position: "relative" }} className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary", height: "100%", }}>
                     <CardContent >
                         <Typography variant='h5' component="h5">Sales Quantity</Typography>
                         <Box height="40vh" width="100%">
@@ -67,8 +67,8 @@ function Projecttable
                 </Card>
 
             </Grid>
-            <Grid item xs={12} md={3} >
-                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary", height: "50vh" }}>
+            <Grid item xs={12} md={4} >
+                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary", height: "100%" }}>
 
                     <CardContent >
                         <Typography variant='h5' component="h5" >Order Overview</Typography>

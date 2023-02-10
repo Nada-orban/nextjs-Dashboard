@@ -27,21 +27,23 @@ function Trakingdetails() {
     const theme = useTheme();
 
     return (
-        <Grid container sx={{ width: "100%", mt: 3 }}>
-            <Grid item xs={12} md={4} >
-                <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary", height: "100%" }}>
-                    <CardContent >
+        <Grid container sx={{ width: "100%", mt: 5 }}>
+            <Grid item xs={12} md={4} sx={{ mt: 2 }}>
+                <Card className={styles.card} sx={{
+                    bgcolor: "primary.main", color: "text.primary", height: "100%",
+                }}>
+                    < CardContent >
                         <Typography variant='h6' component="h6">Campaing</Typography>
-                        <Box>
+                        <Box position="relative" height="30vh">
                             <Progresscircle />
                         </Box>
 
 
                     </CardContent>
                 </Card>
-            </Grid>
-            <Grid item xs={12} md={4}>
-                <Card xs={{ position: "relative" }} className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary", height: "100%" }}>
+            </Grid >
+            <Grid item xs={12} md={4} sx={{ mt: 2 }}>
+                <Card xs={{ position: "relative" }} className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary", height: "100%", }}>
                     <CardContent >
                         <Typography variant='h6' component="h6">Sales Quantity</Typography>
                         <Box height="30vh" width="100%">
@@ -52,7 +54,7 @@ function Trakingdetails() {
                 </Card>
             </Grid>
 
-            <Grid item xs={12} md={4}  >
+            <Grid item xs={12} md={4} sx={{ mt: 2 }} >
                 <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary", height: "100%" }}>
                     <CardContent >
                         <Typography variant='h6' component="h6">Pie Chart</Typography>

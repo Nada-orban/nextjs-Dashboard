@@ -155,7 +155,7 @@ export default function Drawer1({ children }) {
                             alignItems="center">
                             <Grid item xs={12} md={8} >
                                 <Breadcrumb1 />
-                                <p>Table</p>
+
                             </Grid>
                             <Grid item xs={12} md={4} >
                                 <Box sx={{ flexGrow: 1 }} />
