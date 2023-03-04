@@ -72,7 +72,7 @@ function ListDetails() {
                         <ListItemText primary="Billing" />
                     </ListItemButton>
                 </Link>
-                <Link href="/rtl">
+                {/* <Link href="/rtl">
                     <ListItemButton>
                         <ListItemIcon>
                             <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
@@ -81,7 +81,7 @@ function ListDetails() {
                         </ListItemIcon>
                         <ListItemText primary="Rtl" />
                     </ListItemButton>
-                </Link>
+                </Link> */}
 
 
             </List>

@@ -28,7 +28,7 @@ function Trakingdetails() {
 
     return (
         <Grid container sx={{ width: "100%", mt: 5 }}>
-            <Grid item xs={12} md={4} sx={{ mt: 2 }}>
+            {/* <Grid item xs={12} md={4} sx={{ mt: 2 }}>
                 <Card className={styles.card} sx={{
                     bgcolor: "primary.main", color: "text.primary", height: "100%",
                 }}>
@@ -41,8 +41,8 @@ function Trakingdetails() {
 
                     </CardContent>
                 </Card>
-            </Grid >
-            <Grid item xs={12} md={4} sx={{ mt: 2 }}>
+            </Grid > */}
+            <Grid item xs={12} md={6} sx={{ mt: 2 }}>
                 <Card xs={{ position: "relative" }} className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary", height: "100%", }}>
                     <CardContent >
                         <Typography variant='h6' component="h6">Sales Quantity</Typography>
@@ -54,7 +54,7 @@ function Trakingdetails() {
                 </Card>
             </Grid>
 
-            <Grid item xs={12} md={4} sx={{ mt: 2 }} >
+            <Grid item xs={12} md={6} sx={{ mt: 2 }} >
                 <Card className={styles.card} sx={{ bgcolor: "primary.main", color: "text.primary", height: "100%" }}>
                     <CardContent >
                         <Typography variant='h6' component="h6">Pie Chart</Typography>
