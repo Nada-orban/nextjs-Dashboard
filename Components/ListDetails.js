@@ -19,6 +19,7 @@ import Fab from '@mui/material/Fab';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 import TimelineIcon from '@mui/icons-material/Timeline';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 
 
@@ -98,7 +99,7 @@ function ListDetails() {
                     <ListItemButton>
                         <ListItemIcon>
                             <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
-                                <Person2Icon />
+                                <AdminPanelSettingsIcon />
                             </Avatar>
                         </ListItemIcon>
                         <ListItemText primary="Profile" />
@@ -154,7 +155,7 @@ function ListDetails() {
                         <ListItemText primary="Line Chart" />
                     </ListItemButton>
                 </Link>
-                <Link href="/signin">
+                {/* <Link href="/signin">
                     <ListItemButton>
                         <ListItemIcon>
                             <Avatar sx={{ bgcolor: "rgb(248, 249, 250)", color: "black" }} variant="rounded">
@@ -173,7 +174,7 @@ function ListDetails() {
                         </ListItemIcon>
                         <ListItemText primary="Sign Up" />
                     </ListItemButton>
-                </Link>
+                </Link> */}
 
             </List >
 

@@ -32,7 +32,7 @@ function billing() {
                             />
                         </Grid>
                         <Grid item xs={12} md={5}>
-                            <Card sx={{ textAlign: "center", borderRadius: "10px", mb: 3 }}>
+                            <Card sx={{ textAlign: "center", borderRadius: "10px", mb: 3, bgcolor: "primary.main" }}>
                                 <CardContent>
                                     <Avatar sx={{ bgcolor: blue[700], }} variant="rounded">
                                         <AccountBalanceIcon /></Avatar>
@@ -42,7 +42,7 @@ function billing() {
                                     <Typography variant='h4' sx={{ mt: 1 }}>+$2000</Typography>
                                 </CardContent>
                             </Card>
-                            <Card sx={{ textAlign: "center", borderRadius: "10px" }}>
+                            <Card sx={{ textAlign: "center", borderRadius: "10px", bgcolor: "primary.main" }}>
                                 <CardContent>
                                     <Avatar sx={{ bgcolor: blue[700] }} variant="rounded"><BsPaypal /></Avatar>
 
@@ -59,7 +59,7 @@ function billing() {
 
                     </Grid>
                     {/* Payment Method */}
-                    <Card sx={{ borderRadius: "10px", mt: 2, }}>
+                    <Card sx={{ borderRadius: "10px", mt: 2, bgcolor: "primary.main" }}>
                         <CardContent>
                             <Box display="flex" justifyContent="space-between" alignItems="center">
                                 <Typography>Payment Method</Typography>
@@ -85,7 +85,7 @@ function billing() {
 
                 </Grid>
                 <Grid item xs={12} md={4} className='firstpart' >
-                    <Card sx={{ borderRadius: "10px" }}>
+                    <Card sx={{ borderRadius: "10px", bgcolor: "primary.main" }}>
                         <CardContent>
                             <List>
                                 <ListItem sx={{ display: "flex", justifyContent: "space-between", mb: 4 }}>
@@ -136,7 +136,7 @@ function billing() {
 
             {/* secoundpart */}
 
-            <Card sx={{ borderRadius: "10px", mt: 3 }}>
+            <Card sx={{ borderRadius: "10px", mt: 3, bgcolor: "primary.main" }}>
                 <CardContent>
                     <Typography variant='h6'>Billing Information</Typography>
                     <Card sx={{
